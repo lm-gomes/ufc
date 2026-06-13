@@ -1,9 +1,6 @@
-def funcao_padrao(valor):
-    def contador():
-        return valor + 1
-    return contador
 
-for i in range(10):
-    contador = funcao_padrao(i)
-    print(contador())
 
+lazy_gen = (x**2 for x in range(1000000))
+
+print(next(lazy_gen))  # Outputs: 0
+print(next(lazy_gen))  # Outputs: 1
